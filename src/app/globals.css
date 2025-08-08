@@ -1,15 +1,7 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #121212;
+  --foreground: #ffffff;
+  --accent-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +11,169 @@
   }
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient background for the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(to bottom, navy, black); */
+  color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+/* Ensure sections below Hero have the same gradient */
+section {
+  padding: 80px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+ 
+  color: #ffffff;
+}
+
+/* Gradient background for sections below Hero */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+.btn {
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #121212; /* Dark background */
+  padding: 15px 20px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+  color: #6a11cb; /* Accent color */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #6a11cb; /* Accent color */
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Sticky Navbar on Scroll */
+.navbar.scrolled {
+  background-color: rgba(18, 18, 18, 0.9); /* Slightly transparent */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#about{
+  z-index: 10;
+  position: relative;
+  /* width: 80%; */
+  
+}
+
+#tsparticles canvas {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
