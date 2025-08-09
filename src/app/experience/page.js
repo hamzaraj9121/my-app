@@ -18,37 +18,30 @@ import ParticlesBackground from "../components/ParticlesBackground";
 
 export default function Experience() {
   const experiences = [
+  
     {
-      title: "Web Development Lead",
-      company: "Gamicacloud Development Club",
-      type: "Full-time",
-      duration: "Aug 2024 - Present · 9 mos",
+      title: "Internship Letter",
+      company: "GAMICA Initiative for Artificial Intelligence & Computing (GIAIC)",
+      type: "Internship Full-Time",
+      duration: "Feb - July 2025 ",
       location: "Full Time, Faisalabad, Punjab, Pakistan",
-      logo: "/image.png", // Replace with the actual logo path
+      logo: "/image.png", // Add your internship logo here
       skills: [
         { name: "Next.js", icon: <FaReact /> },
         { name: "React.js", icon: <FaReact /> },
+        { name: "Express.js", icon: <FaReact /> },
         { name: "Node.js", icon: <FaNodeJs /> },
         { name: "Socket.io", icon: <BsChatDots />},
         { name: "MongoDB", icon: <FaDatabase /> },
         { name: "JavaScript", icon: <FaJsSquare /> },
         { name: "CSS", icon: <FaCss3Alt /> },
         { name: "Bootstrap 5.3", icon: <FaBootstrap /> },
+        { name: "Team Leadership", icon: <FaUsers /> },
+        { name: "Communication", icon: <FaFacebook /> },  
       ],
+      
+      pdf: "/cert-201[1].pdf", // Path to your PDF file
     },
-    // {
-    //   title: "Graphic Designer",
-    //   company: "The Arqam Schools Gojra Campus",
-    //   type: "Part-time",
-    //   duration: "Sep 2024 - Present · 8 mos",
-    //   location: "Remote, Gojra, Punjab, Pakistan",
-    //   logo: "/arqam.png", // Replace with the actual logo path
-    //   skills: [
-    //     { name: "Graphic Design", icon: <FaPaintBrush /> },
-    //     { name: "Flyer Design", icon: <FaFileAlt /> },
-    //     { name: "Social Media", icon: <FaFacebook /> },
-    //   ],
-    // },
   ];
 
   return (
@@ -57,12 +50,12 @@ export default function Experience() {
       <div style={{ position: "relative", zIndex: 1,  }}>
         <section id="experience" className="py-5"><ParticlesBackground />
           <div className="container">
-            <h2 className="text-center mb-4" style={{ fontSize: "2.5rem", fontWeight: "600", color: "#fff" }}>
+             <h2 className="text-center mb-4" style={{ fontSize: "2.5rem", fontWeight: "600", color: "#fff" }}>
               Experience
             </h2>
             <div className="row">
               {experiences.map((exp, index) => (
-                <div key={index} className="col-md-6 mb-4">
+                <div key={index} className="col-md-6 mx-auto mb-4">
                   <div className="card h-100 shadow-sm border-0">
                     <div className="card-body" style={{ backgroundColor: "#2a2828" }}>
                       {/* Company Logo and Name */}
@@ -85,7 +78,7 @@ export default function Experience() {
                             fontSize: "1.5rem", // Larger font size for prominence
                             fontWeight: "600", // Bold font
                             textTransform: "uppercase", // Uppercase for company name
-                            letterSpacing: "1px", // Spacing between letters
+                                letterSpacing: "1px", // Spacing between letters
                           }}
                         >
                           {exp.company}
@@ -102,6 +95,20 @@ export default function Experience() {
                       >
                         {exp.title}
                       </h4>
+
+                       {/* PDF Button for Internship */}
+                      {exp.pdf && (
+                        <div className="mt-3 text-center">
+                          <a
+                            href={exp.pdf}
+                            target="_blank"
+                            download="cert-201[1].pdf"
+                            className="btn btn-primary"
+                          >
+                            View Internship Letter (PDF)
+                          </a>
+                        </div>
+                      )}
                       {/* Company Type */}
                       <h6 className="card-subtitle mb-2 text-muted text-center">{exp.type}</h6>
                       {/* Duration and Location */}
@@ -132,11 +139,15 @@ export default function Experience() {
                           ))}
                         </ul>
                       </div>
+                      
                     </div>
                   </div>
                 </div>
               ))}
             </div>
+
+        
+
           </div>
         </section>
       </div>

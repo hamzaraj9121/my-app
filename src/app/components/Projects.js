@@ -5,13 +5,13 @@ export default function Projects() {
         {
             title: 'School Template for Chenab Group of Schools',
             description: 'Created a full-stack school website using React, Node.js, Express, and MongoDB. The site includes a secure admin panel, dynamic student data management, and a responsive, user-friendly design for seamless access across devices.',
-            image: '/Chenab.png', // Replace with the actual image path
+            image: "/Chenab.png", // Replace with the actual image path
             link: 'https://school-template-timi.vercel.app/', // Link to the project
         },
         {
             title: 'SkillMatch.Tech: A Complete Clone',
             description: 'Built a full-stack eCommerce shoe store using React, Node.js, Express, and MongoDB. Implemented secure auth, dynamic product views, and real-time cart features with toast alerts and live total updates via RESTful APIs.',
-            image: '/Skill.png', // Replace with the actual image path
+            image: "/Skill.png", // Replace with the actual image path
             link: 'https://www.skillmatch.tech/', // Link to the project
         },
         {
