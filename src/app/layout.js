@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 
 import { Poppins } from 'next/font/google';
-import ParticlesBackground from './components/ParticlesBackground';
+import ParticlesBackground from '@/components/ParticlesBackground';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '600', '700'] });
 

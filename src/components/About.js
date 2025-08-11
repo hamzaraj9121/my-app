@@ -5,26 +5,26 @@ export default function About() {
     <section
       id="about"
       style={{
-        background: "", // Dark background for contrast
-        color: "#f0f0f0", // Soft white text for readability
-        width: "100%", // Full width to match the navbar
-        height: "70vh", // Full viewport height
+        background: "", 
+        color: "#f0f0f0", 
+        width: "100%", 
+        height: "70vh", 
         display: "flex",
-        flexDirection: "column", // Stack items vertically
-        alignItems: "center", // Center items horizontally
-        justifyContent: "center", // Center items vertically
+        flexDirection: "column", 
+        alignItems: "center",
+        justifyContent: "center", 
         textAlign: "center", // Center-align text
-        padding: "0 20px", // Add padding for responsiveness
+        padding: "0 20px", 
       }}
     >
       <div className="container" style={{ maxWidth: "1200px" }}>
         <h2
           style={{
-            fontSize: "3rem", // Match the Hero section heading size
-            fontWeight: "600", // Match the boldness of the Hero section heading
+            fontSize: "3rem",
+            fontWeight: "600", 
             
-            letterSpacing: "1.5px", // Subtle letter spacing for consistency
-            marginBottom: "20px", // Space below heading
+            letterSpacing: "1.5px", 
+            marginBottom: "20px", 
             position: "relative",
           }} className="display-4"
         >
@@ -34,17 +34,17 @@ export default function About() {
               display: "block",
               width: "60px",
               height: "3px",
-              background: "#00BFFF", // Accent color for separator
+              background: "#00BFFF", 
               margin: "10px auto 0",
             }}
           ></span>
         </h2>
         <p
           style={{
-            fontSize: "1.2rem", // Readable paragraph size
-            lineHeight: "1.8", // Breathing space between lines
-            fontFamily: "'Roboto', sans-serif", // Clean font for body text
-            color: "#e0e0e0", // Softer white for contrast
+            fontSize: "1.2rem", 
+            lineHeight: "1.8", 
+            fontFamily: "'Roboto', sans-serif", 
+            color: "#e0e0e0", 
             marginBottom: "20px",
           }}
         >

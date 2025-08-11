@@ -14,7 +14,7 @@ import {
 import { BsChatDots } from "react-icons/bs";
 import { FaBootstrap } from "react-icons/fa6";
 
-import ParticlesBackground from "../components/ParticlesBackground";
+import ParticlesBackground from "@/components/ParticlesBackground";
 
 export default function Experience() {
   const experiences = [

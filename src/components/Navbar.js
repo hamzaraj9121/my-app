@@ -49,7 +49,7 @@ export default function Navbar() {
               <Link className="nav-link" href="skills">Skills</Link> {/* Added Experience Link */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="#contact">Contact</Link>
+              <Link className="nav-link" href="contact">Contact</Link>
             </li>
           </ul>
         </div>
