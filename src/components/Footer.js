@@ -77,7 +77,7 @@ export default function Footer() {
 
           {/* LinkedIn Icon */}
           <a
-            href="https://www.linkedin.com/in/hamza-shahbaz-792539365/"
+            href="https://www.linkedin.com/in/muhammad-hamza-792539365/"
             target="_blank"
             rel="noopener noreferrer"
             style={{
