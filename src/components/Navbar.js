@@ -40,7 +40,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <Link className="navbar-brand" href="/">Hamza Rajpoot</Link>
+        <Link className="navbar-brand" href="/">Muhammad Hamza</Link>
 
         {/* Theme toggle button */}
         <button
@@ -72,7 +72,7 @@ export default function Navbar() {
               <Link className="nav-link" href="#projects">Projects</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/experience">Experience</Link>
+              <Link className="nav-link" href="#experience">Experience</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" href="/skills">Skills</Link>

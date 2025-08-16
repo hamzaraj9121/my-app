@@ -110,7 +110,7 @@ export default function Experience() {
                         </div>
                       )}
                       {/* Company Type */}
-                      <h6 className="card-subtitle mb-2 text-muted text-center">{exp.type}</h6>
+                      <h6 className="card-subtitle mb-2 text-muted text-center mt-3">{exp.type}</h6>
                       {/* Duration and Location */}
                       <div className="d-flex align-items-center mb-2">
                         <FaClock className="me-2 text-primary" />

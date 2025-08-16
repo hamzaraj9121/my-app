@@ -12,6 +12,7 @@
     "aos": "^2.3.4",
     "axios": "^1.11.0",
     "bootstrap": "^5.3.7",
+    "framer-motion": "^12.23.12",
     "mongoose": "^8.17.1",
     "next": "15.4.6",
     "nodemailer": "^7.0.5",
