@@ -1,4 +1,6 @@
 "use client";
+import { FaLinkedin, FaPhoneAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { FaGraduationCap } from "react-icons/fa";
 import ParticlesBackground from "@/components/ParticlesBackground";
@@ -6,6 +8,9 @@ import axios from "axios";
 import { FaSpinner } from "react-icons/fa";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { MdOutlineMail } from "react-icons/md";
+import "@/components/contact.css"
+import { FaLocationDot } from "react-icons/fa6";
 
 export default function ContactForm() {
   const {
@@ -178,16 +183,17 @@ export default function ContactForm() {
       <div className="card-body">
      <div className="card bg-dark d-flex flex-row align-items-center mb-3 p-3">
   <i className="bi bi-envelope me-2 text-warning"></i>
-
-  <strong className="mx-2">Email:</strong>
-  <span className="text-body-secondary">waleednisar43@gmail.com</span>
+<FaLocationDot />
+  <strong className="mx-2">Location</strong>
+  <span className="text-body-secondary">Faisalabad,Punjab,Pakistan</span>
 </div>
 
       <div className="card bg-dark d-flex flex-row align-items-center mb-3 p-3">
-  <i className="bi bi-envelope me-2 text-warning"></i>
+  <FaPhoneAlt />
   
-  <strong className="mx-2">Email:</strong>
-  <span className="text-body-secondary">waleednisar43@gmail.com</span>
+  <strong className="mx-2">Phone</strong>
+
+  <span className="text-body-secondary">+923270086607</span>
 </div>
 
 <div className="card bg-dark d-flex flex-row align-items-center mb-3 p-3">
@@ -199,20 +205,26 @@ export default function ContactForm() {
         <h2 className="  mt-4 mb-3">Follow Me</h2>
         <div className="d-flex align-items-center mb-3">
           <i className="bi bi-github me-2"></i>
-          <span>Github</span>
+         <span>  <FaGithub /> </span><span className="ms-2">Github</span>
         </div>
         <div className="d-flex align-items-center mb-3">
           <i className="bi bi-linkedin me-2"></i>
-          <span>LinkedIn</span>
+          <span><FaLinkedin /></span><span className="ms-2">LinkedIn</span>
         </div>
         <div className="d-flex align-items-center mb-3">
           <i className="bi bi-envelope me-2"></i>
-          <span>Email</span>
+         <span> <MdOutlineMail /></span> <span className="ms-2">Email</span>
         </div>
-        <div className="d-flex align-items-center">
-          <i className="bi bi-check-circle me-2 text-success"></i>
-          <span>Available for work</span>
-        </div>
+      <div className="status-card d-flex flex-column p-3 mb-3">
+  <div className="d-flex align-items-center mb-2">
+    <span className="status-dot me-2"></span>
+    <h6 className="mb-0 text-success fw-bold">Available for work</h6>
+  </div>
+  <p className="mb-0 text-light-emphasis">
+    I'm currently available for freelance projects and full-time opportunities.
+  </p>
+</div>
+
       </div>
     </div>
           </div>

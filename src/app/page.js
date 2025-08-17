@@ -5,6 +5,9 @@ import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
 import ContactForm from "@/components/Contact";
+import SkillsEducation from "./skills/page";
+
+
 
 export default function Home() {
   return (
@@ -12,10 +15,11 @@ export default function Home() {
       <Navbar />
       <Hero /> {/* Hero section with particles */}
       <About /> {/* Gradient background starts here */}
+      <SkillsEducation/>
       <Experience/>
       <Projects />
-     <ContactForm/>
-      <Footer />
+     <ContactForm></ContactForm>
+      <Footer/>
     </div>
   );
 }
