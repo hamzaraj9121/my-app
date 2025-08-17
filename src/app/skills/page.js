@@ -12,7 +12,7 @@ export default function SkillsEducation() {
       <h2
         className="skills-heading"
         style={{
-          fontWeight: 700,
+          fontWeight: 600,
           fontSize: "2.5rem",
           letterSpacing: "2px",
           textAlign: "center",
