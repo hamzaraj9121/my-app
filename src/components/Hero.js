@@ -169,7 +169,7 @@ export default function Hero() {
 `}</style>
 
      <a
-  href="https://github.com/"
+  href="https://www.linkedin.com/in/muhammad-hamza-792539365/"
   target="_blank"
   rel="noopener noreferrer"
   className="pulse-hover-btn"
@@ -200,7 +200,7 @@ export default function Hero() {
   }
 `}</style>
          <a
-  href="https://github.com/"
+  href="mailto:hamzashahbaz9121@gmail.com"
   target="_blank"
   rel="noopener noreferrer"
   className="pulse-hover-btn"
