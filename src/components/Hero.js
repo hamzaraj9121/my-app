@@ -164,48 +164,72 @@ export default function Hero() {
     transform: scale(1.1);
     border-color: #eae6e8ff;
     color: #eae6e8ff;
-    box-shadow: 0 0 20px #eae6e8ff, 0 0 40px #eae6e8ff;
+    
   }
 `}</style>
 
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              border: "2px solid #fff",
-              borderRadius: "50%",
-              width: "64px",
-              height: "64px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontSize: "2rem",
-              transition: "border-color 0.2s, color 0.2s",
-              textDecoration: "none",
-            }}
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="mailto:your@email.com"
-            style={{
-              border: "2px solid #fff",
-              borderRadius: "50%",
-              width: "64px",
-              height: "64px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontSize: "2rem",
-              transition: "border-color 0.2s, color 0.2s",
-              textDecoration: "none",
-            }}
-          >
-            <MdEmail />
-          </a>
+     <a
+  href="https://github.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="pulse-hover-btn"
+>
+  <FaLinkedinIn />
+</a>
+
+<style jsx>{`
+  .pulse-hover-btn {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pulse-hover-btn:hover {
+    transform: scale(1.1);
+    border-color: #eae6e8ff;
+    color: #eae6e8ff;
+    
+  }
+`}</style>
+         <a
+  href="https://github.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="pulse-hover-btn"
+>
+  <MdEmail />
+</a>
+
+<style jsx>{`
+  .pulse-hover-btn {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pulse-hover-btn:hover {
+    transform: scale(1.1);
+    border-color: #eae6e8ff;
+    color: #eae6e8ff;
+    
+  }
+`}</style>
         </div>
       </div>
     </section>
