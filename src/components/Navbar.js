@@ -75,7 +75,7 @@ export default function Navbar() {
               <Link className="nav-link" href="#experience">Experience</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/skills">Skills</Link>
+              <Link className="nav-link" href="#skill">Skills</Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" href="/contact">Contact Us</Link>

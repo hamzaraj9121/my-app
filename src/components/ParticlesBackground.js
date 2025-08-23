@@ -19,24 +19,31 @@ export default function ParticlesBackground() {
           enable: true, // Enable full-screen particles
         },
         background: {
-          color: "#121212", // Solid dark background
+          color: "#0a192f", // Rich navy blue background
         },
         particles: {
           number: {
-            value: 50, // Number of particles
+            value: 60, // Increased number of particles
+          },
+          color: {
+            value: "#64ffda", // Teal accent color for particles
           },
           size: {
             value: 3, // Size of particles
           },
           move: {
             enable: true,
-            speed: 2, // Speed of particle movement
+            speed: 1.5, // Slightly slower for more elegant movement
+            direction: "none",
+            random: true,
+            straight: false,
+            outMode: "bounce",
           },
           links: {
             enable: true, // Enable links between particles
             distance: 150, // Distance for linking
-            color: "#ffffff", // Link color
-            opacity: 0.4,
+            color: "#8892b0", // Light blue-gray for links
+            opacity: 0.5,
             width: 1,
           },
         },

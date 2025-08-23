@@ -35,8 +35,49 @@ export default function Projects() {
     ];
 
     return (
-        <section id="projects" className="py-5">
-            <div className="container position-relative">
+        
+
+
+        
+        <section id="projects" className="py-5" 
+          style={{
+        // background: "var(--background)", // Using our new background variable
+        color: "var(--foreground)", // Using our new foreground variable
+        padding: "80px 20px", // Increased padding for better spacing
+        textAlign: "center", // Center align all content
+        position: "relative", // Position relative for absolute children
+      }}>
+           <div
+    style={{
+      position: "absolute",
+      top: "-100px",
+      left: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(59,130,246,0.4)", // Tailwind blue-500
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 0,
+    }}
+  ></div>
+   <div
+    style={{
+      position: "absolute",
+      bottom: "-100px",
+      right: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(147,51,234,0.4)", // Tailwind purple-600
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1 ,
+    }}
+  ></div>
+          
+              <h6 className="text-uppercase text-center mb-2" style={{ color: "var(--accent)", letterSpacing: "2px", fontWeight: "600" }}>My Recent Work</h6>
+              <h2 className="mb-5 text-center fs-1 fw-bolder">
+                Featured <span style={{ color: "var(--accent)" }}>Projects</span>
+              </h2>
                 <h2
                     className="text-center"
                     style={{
@@ -57,7 +98,7 @@ export default function Projects() {
                         <ProjectCard key={index} {...project} />
                     ))}
                 </div>
-            </div>
+            
         </section>
     );
 }

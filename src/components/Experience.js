@@ -14,8 +14,6 @@ import {
 import { BsChatDots } from "react-icons/bs";
 import { FaBootstrap } from "react-icons/fa6";
 
-import ParticlesBackground from "@/components/ParticlesBackground";
-
 export default function Experience() {
   const experiences = [
   
@@ -45,19 +43,111 @@ export default function Experience() {
   ];
 
   return (
-    <>
+    <div className="experience-section"   style={{
+        background: "#020b16", // Dark background for contrast
+        color: "#f0f0f0", // Soft white text for readability
+        padding: "40px 20px", // Adjust padding
+        textAlign: "center", // Center align all content
+        position: "relative", // Position relative for absolute children
+      }}>
+
+   <div
+    style={{
+      position: "absolute",
+      top: "-100px",
+      left: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(59,130,246,0.4)", // Tailwind blue-500
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
+   <div
+    style={{
+      position: "absolute",
+      bottom: "-100px",
+      right: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(147,51,234,0.4)", // Tailwind purple-600
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
+   
       
-      <div style={{ position: "relative", zIndex: 1,  }}>
-        <section id="experience" className="py-5"><ParticlesBackground />
+     
+        <section id="experience" className="py-5">
           <div className="container">
              <h2 className="text-center mb-4" style={{ fontSize: "2.5rem", fontWeight: "600", color: "#fff" }}>
               Experience
             </h2>
-            <div className="row">
+            <div className="row" style={{  zIndex: 0,}}>
+                {/* Blue blur - top left */}
+  <div
+    style={{
+      position: "absolute",
+      top: "-100px",
+      left: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(59,130,246,0.4)", // Tailwind blue-500
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
+
+  {/* Purple blur - bottom right */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "-100px",
+      right: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(147,51,234,0.4)", // Tailwind purple-600
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
+
               {experiences.map((exp, index) => (
                 <div key={index} className="col-md-6 mx-auto mb-4">
                   <div className="card h-100 shadow-sm border-0">
                     <div className="card-body" style={{ backgroundColor: "#2a2828" }}>
+                        <div
+    style={{
+      position: "absolute",
+      top: "-100px",
+      left: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(59,130,246,0.4)", // Tailwind blue-500
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
+
+  {/* Purple blur - bottom right */}
+  <div
+    style={{
+      position: "absolute",
+      bottom: "-100px",
+      right: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(147,51,234,0.4)", // Tailwind purple-600
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 1,
+    }}
+  ></div>
                       {/* Company Logo and Name */}
                       <div className="d-flex align-items-center mb-3">
                         <img
@@ -150,7 +240,6 @@ export default function Experience() {
 
           </div>
         </section>
-      </div>
-    </>
+        </div>
   );
 }

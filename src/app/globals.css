@@ -1,13 +1,15 @@
 :root {
-  --background: #121212;
-  --foreground: #ffffff;
-  --accent-gradient: linear-gradient(135deg, #6a11cb, #2575fc);
+  --background: #020b16;
+  --foreground: #f0f0f0;
+  --accent: #64ffda;
+  --navy-light: #051326;
+  --secondary: #8892b0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020b16;
+    --foreground: #e6f1ff;
   }
 }
 
@@ -21,13 +23,14 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Gradient background for the entire page */
+/* Background for the entire page */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  /* background: linear-gradient(to bottom, navy, black); */
-  color: #ffffff;
+
+  background: #020b16; /* darker navy blue */
+  color: var(--foreground, #f0f0f0);
 }
 
 * {
@@ -42,20 +45,24 @@ a {
 }
 
 header {
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
-  color: white;
+  background: var(--background);
+  color: var(--foreground);
+  border-bottom: 1px solid var(--secondary);
 }
 
 .card {
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: var(--navy-light);
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--secondary);
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-7px);
+  box-shadow: 0 20px 30px -15px var(--navy-shadow);
+  border-color: var(--accent);
 }
 
 .card img {
@@ -65,11 +72,13 @@ header {
 h1, h2, h3 {
   font-weight: 700;
   letter-spacing: 0.5px;
+  color: var(--foreground);
 }
 
 p {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--secondary);
+  line-height: 1.6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -78,15 +87,13 @@ p {
   }
 }
 
-/* Ensure sections below Hero have the same gradient */
+/* Section styling */
 section {
   padding: 80px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
- 
-  color: #ffffff;
+  border-bottom: 1px solid rgba(136, 146, 176, 0.2);
+  color: var(--foreground);
+  background-color: var(--background);
 }
-
-/* Gradient background for sections below Hero */
 
 .container {
   max-width: 1200px;
@@ -94,9 +101,53 @@ section {
 }
 
 .btn-primary {
-  background: var(--accent-gradient);
-  border: none;
-  color: white;
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Project card hover effects */
+.project-link:hover .card {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px -20px var(--navy-shadow);
+  border-color: var(--accent);
+}
+
+/* Accent text color class */
+.text-accent {
+  color: var(--accent) !important;
+}
+
+/* Secondary text color class */
+.text-secondary-custom {
+  color: var(--secondary) !important;
+}
+
+/* Background color classes */
+.bg-navy {
+  background-color: var(--background) !important;
+}
+
+.bg-navy-light {
+  background-color: var(--navy-light) !important;
+}
+
+/* Image hover zoom effect */
+.hover-zoom {
+  transition: transform 0.5s ease;
+}
+
+.project-link:hover .hover-zoom {
+  transform: scale(1.05);
 }
 
 .btn-primary:hover {
@@ -123,7 +174,7 @@ img {
 
 /* Navbar Styling */
 .navbar {
-  background-color: #121212; /* Dark background */
+  background-color: #06051c; /* Dark background */
   padding: 15px 20px;
   transition: background-color 0.3s ease-in-out;
 }
@@ -161,7 +212,7 @@ img {
 
 /* Sticky Navbar on Scroll */
 .navbar.scrolled {
-  background-color: rgba(18, 18, 18, 0.9); /* Slightly transparent */
+  background-color: rgba(18, 5, 49, 0.9); /* Slightly transparent */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 #about{
@@ -224,7 +275,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #4285f4; /* example color */
+  background: #071e42; /* example color */
   border-radius: 50%;
   margin: 0 auto 40px auto; /* space between icons */
    
@@ -232,3 +283,17 @@ img {
 
   font-size: 22px;
 }
+
+
+ @keyframes blink {
+    0%, 100% {
+      border-color: #ffffffff;
+      color: #14e459ff;
+      box-shadow: 0 0 5px #fff;
+    }
+    50% {
+      border-color: #4feb17ff;
+      color: #11ec7bff;
+      box-shadow: 0 0 20px #1de67bff;
+    }
+  }

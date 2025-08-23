@@ -5,7 +5,7 @@ import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import Experience from "@/components/Experience";
 import ContactForm from "@/components/Contact";
-import SkillsEducation from "./skills/page";
+import SkillsEducation from "@/components/Skill";
 
 
 

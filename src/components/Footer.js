@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "#121212", // Dark background for contrast
+        background: "#020b16", // Dark background for contrast
         color: "#f0f0f0", // Soft white text for readability
         padding: "40px 20px", // Adjust padding
         textAlign: "center", // Center align all content

@@ -1,14 +1,17 @@
 "use client";
-import ParticlesBackground from "./ParticlesBackground";
+
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import "@/app/globals.css";
+import ParticlesBackground from "./ParticlesBackground";
 
 export default function Hero() {
   return (
     <section
       id="hero"
       style={{
+        zIndex: 0,
+        background:"transparent",
         position: "relative",
         height: "100vh",
         display: "flex",
@@ -26,11 +29,11 @@ export default function Hero() {
           className="display-4"
           style={{
             fontWeight: 700,
-            fontSize: "3rem",
+            fontSize: "3.5rem",
             letterSpacing: "2px",
-            color: "#fff",
+            color: "var(--foreground)",
             marginBottom: "1rem",
-            textShadow: "0 2px 16px rgba(0,0,0,0.3)",
+            textShadow: "0 4px 12px rgba(0,0,0,0.5)",
           }}
         >
           Welcome to My Portfolio
@@ -38,10 +41,10 @@ export default function Hero() {
         <p
           className="lead"
           style={{
-            fontSize: "1.5rem",
-            fontWeight: 500,
-            color: "#f8f9faff",
-            marginBottom: "0.5rem",
+            fontSize: "1.8rem",
+            fontWeight: 600,
+            color: "var(--accent)",
+            marginBottom: "0.8rem",
           }}
         >
         Muhammad Hamza
@@ -49,9 +52,10 @@ export default function Hero() {
         <p
           className="lead"
           style={{
-            fontSize: "1.1rem",
-            color: "#e0e0e0",
+            fontSize: "1.2rem",
+            color: "var(--secondary)",
             marginBottom: "2.5rem",
+            letterSpacing: "1px",
           }}
         >
           Web Developer &nbsp;|&nbsp; Flyer Designer &nbsp;|&nbsp; UI/UX Designer
@@ -69,60 +73,59 @@ export default function Hero() {
             href="#Project"
             style={{
               background: "transparent",
-              color: "#fff",
+              color: "var(--accent)",
               fontWeight: 600,
-              border: "none",
-              borderRadius: "50px",
+              border: "1px solid var(--accent)",
+              borderRadius: "4px",
               padding: "1rem 2.5rem",
               fontSize: "1.1rem",
               letterSpacing: "1px",
-              boxShadow: "0 2px 16px rgba(66,133,244,0.15)",
-              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+              boxShadow: "0 4px 20px rgba(100, 255, 218, 0.1)",
+              transition: "all 0.3s ease",
               textDecoration: "none",
               display: "inline-block",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.07)";
-              e.currentTarget.style.boxShadow = "0 4px 24px rgba(251, 252, 253, 0.35)";
-              e.currentTarget.style.background = "#060606ff";
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.boxShadow = "0 8px 30px rgba(150, 300, 270, 0.8)";
+              e.currentTarget.style.background = "rgba(4, 248, 191, 0.1)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 2px 16px rgba(242, 245, 249, 0.15)";
-              e.currentTarget.style.background = "#060606ff";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 20px rgba(100, 255, 218, 0.1)";
+              e.currentTarget.style.background = "transparent";
             }}
           >
             VIEW WORK
           </a>
-          <a
-            href="#Contact"
-              
+         <a
+            href="#Project"
             style={{
               background: "transparent",
-              color: "#fff",
+              color: "var(--accent)",
               fontWeight: 600,
-              border: "none",
-              borderRadius: "50px",
+              border: "1px solid var(--accent)",
+              borderRadius: "4px",
               padding: "1rem 2.5rem",
               fontSize: "1.1rem",
               letterSpacing: "1px",
-              boxShadow: "0 2px 16px rgba(66,133,244,0.15)",
-              transition: "transform 0.2s, box-shadow 0.2s, background 0.2s",
+              boxShadow: "0 4px 20px rgba(100, 255, 218, 0.1)",
+              transition: "all 0.3s ease",
               textDecoration: "none",
               display: "inline-block",
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.07)";
-              e.currentTarget.style.boxShadow = "0 4px 24px rgba(251, 252, 253, 0.35)";
-              e.currentTarget.style.background = "#060606ff";
+              e.currentTarget.style.transform = "translateY(-5px)";
+              e.currentTarget.style.boxShadow = "0 8px 30px rgba(100, 255, 218, 0.2)";
+              e.currentTarget.style.background = "rgba(100, 255, 218, 0.1)";
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 2px 16px rgba(242, 245, 249, 0.15)";
-              e.currentTarget.style.background = "#060606ff";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 20px rgba(100, 255, 218, 0.1)";
+              e.currentTarget.style.background = "transparent";
             }}
           >
-            GET IN TOUCH
+            Get In Touch
           </a>
         </div>
         {/* Social Icons */}
@@ -133,26 +136,38 @@ export default function Hero() {
             justifyContent: "center",
           }}
         >
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              border: "2px solid #fff",
-              borderRadius: "50%",
-              width: "64px",
-              height: "64px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#fff",
-              fontSize: "2rem",
-              transition: "border-color 0.2s, color 0.2s",
-              textDecoration: "none",
-            }}
-          >
-            <FaGithub />
-          </a>
+       <a
+  href="https://github.com/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="pulse-hover-btn"
+>
+  <FaGithub />
+</a>
+
+<style jsx>{`
+  .pulse-hover-btn {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .pulse-hover-btn:hover {
+    transform: scale(1.1);
+    border-color: #eae6e8ff;
+    color: #eae6e8ff;
+    box-shadow: 0 0 20px #eae6e8ff, 0 0 40px #eae6e8ff;
+  }
+`}</style>
+
           <a
             href="https://linkedin.com/"
             target="_blank"
