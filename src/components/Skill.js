@@ -1,6 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import "./skill.css";
+import { FaCode, FaDatabase } from "react-icons/fa";
+import { MdDisplaySettings, MdOutlineDeveloperMode } from "react-icons/md";
 
 export default function SkillsEducation() {
   const [animate, setAnimate] = useState(false);
@@ -12,6 +15,17 @@ export default function SkillsEducation() {
 
   // Helper to get animated width
   const getBarClass = () => (animate ? "progress-bar animate-progress" : "progress-bar");
+
+  // Framer Motion variants
+  const headingVariant = {
+    hidden: { opacity: 0, y: -40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } }
+  };
+
+  const cardVariant = {
+    hidden: { opacity: 0, scale: 0.95, y: 40 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.7 } }
+  };
 
   return (
     <div
@@ -27,8 +41,11 @@ export default function SkillsEducation() {
     >
       <div className="container mt-5">
         {/* Animated Heading */}
-        <h2
+        <motion.h2
           className="skills-heading"
+          variants={headingVariant}
+          initial="hidden"
+          animate="visible"
           style={{
             fontWeight: 700,
             fontSize: "2.5rem",
@@ -39,39 +56,33 @@ export default function SkillsEducation() {
             textShadow: "0 2px 16px rgba(226, 231, 238, 0.15)",
             transition: "color 0.4s, transform 0.4s",
           }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.color = "#010101ff";
-            e.currentTarget.style.transform = "scale(1.07)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.color = "#f4f6f8ff";
-            e.currentTarget.style.transform = "scale(1)";
-          }}
+          whileHover={{ color: "#010101ff", scale: 1.07 }}
         >
           <a href="#Skill">Skills & Technologies</a>
-        </h2>
+        </motion.h2>
         <div className="row">
           {/* Frontend Card */}
           <div className="col-md-6 mb-4">
-            <div
+            <motion.div
               className="card p-3 text-white rounded-3"
+              variants={cardVariant}
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.03, boxShadow: "0 4px 24px rgba(100,255,218,0.12)" }}
               style={{
                 minHeight: "300px",
                 backgroundColor: "#051326", // Darker navy blue for cards
               }}
             >
               <div className="d-flex align-items-center mb-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  className="bi bi-code-slash text-primary me-2"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294l4-13zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0zm6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0z" />
-                </svg>
+              <span className="me-2 text-primary" style={{ fontSize: '1.5rem' }}>
+
+              <FaCode />
+              </span>
+              <span>
                 <h4 className="mb-0">Frontend</h4>
+
+              </span>
               </div>
               <p className="text-muted mb-4">Crafting beautiful, responsive user interfaces</p>
               <div className="mb-2">
@@ -96,7 +107,7 @@ export default function SkillsEducation() {
                     className={getBarClass()}
                     role="progressbar"
                     style={{ width: animate ? "70%" : "0%" }}
-                    aria-valuenow="95"
+                    aria-valuenow="70"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
@@ -107,9 +118,9 @@ export default function SkillsEducation() {
                 <span className="text-white">Next.js</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-primary animate-progress"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "80%" }}
+                    style={{ width: animate ? "80%" : "0%" }}
                     aria-valuenow="80"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -122,9 +133,9 @@ export default function SkillsEducation() {
                 <span className="text-white">Tailwind CSS</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-primary animate-progress"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "92%" }}
+                    style={{ width: animate ? "92%" : "0%" }}
                     aria-valuenow="92"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -137,9 +148,9 @@ export default function SkillsEducation() {
                 <span className="text-white">Framer Motion</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-primary animate-progress"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "85%" }}
+                    style={{ width: animate ? "85%" : "0%" }}
                     aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -148,39 +159,40 @@ export default function SkillsEducation() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Backend Card */}
           <div className="col-md-6 mb-4">
-            <div
+            <motion.div
               className="card p-3 text-white rounded-3"
+              variants={cardVariant}
+              initial="hidden"
+              animate="visible"
+              whileHover={{ scale: 1.03, boxShadow: "0 4px 24px rgba(100,255,218,0.12)" }}
               style={{
                 minHeight: "300px",
                 backgroundColor: "#051326", // Darker navy blue for cards
               }}
             >
               <div className="d-flex align-items-center mb-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  className="bi bi-server text-primary me-2"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M1.333 2.667C1.333 1.194 2.527 0 3.999 0h8.667c1.473 0 2.666 1.194 2.666 2.667v10.666c0 1.473-1.194 2.667-2.666 2.667H3.999c-1.472 0-2.666-1.194-2.666-2.667V2.667zM3.999 1.333c-.46 0-.666.805-.666 1.334h10.666c0-.529-.805-1.334-.666-1.334H3.999zm0 12h8.667c.46 0 .666-.805.666-1.334V8.666c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334zm0-8h8.667c.46 0 .666-.805.666-1.334V2.667c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334z" />
-                </svg>
+                <span className="me-2 text-primary" style={{ fontSize: '1.5rem' }}>
+                  <MdOutlineDeveloperMode />
+                  </span>
+               <span>
+
                 <h4 className="mb-0">Backend</h4>
+               </span>
+
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
               <div className="mb-2">
                 <span className="text-white">Node.js</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-success"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "90%" }}
+                    style={{ width: animate ? "90%" : "0%" }}
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -195,7 +207,7 @@ export default function SkillsEducation() {
                   <div
                     className="progress-bar bg-secondary animate-progress"
                     role="progressbar"
-                    style={{ width: "85%" }}
+                    style={{ width: animate ? "85%" : "0%" }}
                     aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -210,9 +222,9 @@ export default function SkillsEducation() {
                   <div
                     className="progress-bar bg-danger animate-progress"
                     role="progressbar"
-                    style={{ width: "75%" }}
+                    style={{ width: animate ? "75%" : "0%" }}
                     aria-valuenow="75"
-                    aria-valuemin="0"
+                                                       aria-valuemin="0"
                     aria-valuemax="100"
                   >
                     75%
@@ -222,24 +234,10 @@ export default function SkillsEducation() {
               <div className="mb-2">
                 <span className="text-white">REST API</span>
                 <div className="progress">
-                  <div
+                  <div        
                     className="progress-bar bg-warning animate-progress"
                     role="progressbar"
-                    style={{ width: "88%" }}
-                    aria-valuenow="88"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    88%
-                  </div>
-                </div>
-                <div className="mb-2"></div>
-                <span className="text-white">REST API</span>
-                <div className="progress">
-                  <div
-                    className="progress-bar bg-warning animate-progress"
-                    role="progressbar"
-                    style={{ width: "88%" }}
+                    style={{ width: animate ? "88%" : "0%" }}
                     aria-valuenow="88"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -248,7 +246,7 @@ export default function SkillsEducation() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
           <div className="col-md-6 mb-4">
             <div
@@ -259,16 +257,9 @@ export default function SkillsEducation() {
               }}
             >
               <div className="d-flex align-items-center mb-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  className="bi bi-server text-primary me-2"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M1.333 2.667C1.333 1.194 2.527 0 3.999 0h8.667c1.473 0 2.666 1.194 2.666 2.667v10.666c0 1.473-1.194 2.667-2.666 2.667H3.999c-1.472 0-2.666-1.194-2.666-2.667V2.667zM3.999 1.333c-.46 0-.666.805-.666 1.334h10.666c0-.529-.805-1.334-.666-1.334H3.999zm0 12h8.667c.46 0 .666-.805.666-1.334V8.666c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334zm0-8h8.667c.46 0 .666-.805.666-1.334V2.667c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334z" />
-                </svg>
+              <span className="me-2 text-primary" style={{ fontSize: '1.5rem' }}>
+                <MdDisplaySettings />
+              </span>
                 <h4 className="mb-0">DevOps</h4>
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
@@ -276,9 +267,9 @@ export default function SkillsEducation() {
                 <span className="text-white">Git</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-success"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "90%" }}
+                    style={{ width: animate ? "90%":"0%" }}
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -306,14 +297,14 @@ export default function SkillsEducation() {
                 <span className="text-white">Trello</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-danger"
+                    className={getBarClass()}
                     role="progressbar"
-                    style={{ width: "75%" }}
-                    aria-valuenow="75"
+                    style={{ width: animate ? "85%" : "0%", backgroundColor: "#a73f1fff" }}
+                    aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
-                    75%
+                    85%
                   </div>
                 </div>
               </div>
@@ -328,16 +319,10 @@ export default function SkillsEducation() {
               }}
             >
               <div className="d-flex align-items-center mb-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  fill="currentColor"
-                  className="bi bi-server text-primary me-2"
-                  viewBox="0 0 16 16"
-                >
-                  <path d="M1.333 2.667C1.333 1.194 2.527 0 3.999 0h8.667c1.473 0 2.666 1.194 2.666 2.667v10.666c0 1.473-1.194 2.667-2.666 2.667H3.999c-1.472 0-2.666-1.194-2.666-2.667V2.667zM3.999 1.333c-.46 0-.666.805-.666 1.334h10.666c0-.529-.805-1.334-.666-1.334H3.999zm0 12h8.667c.46 0 .666-.805.666-1.334V8.666c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334zm0-8h8.667c.46 0 .666-.805.666-1.334V2.667c0-.529-.805-1.334-.666-1.334H3.999c-.46 0-.666.805-.666 1.334v3.333c0 .529.805 1.334.666 1.334z" />
-                </svg>
+               <span className="me-2 text-primary" style={{ fontSize: '1.5rem' }}>
+                <FaDatabase />
+
+               </span>
                 <h4 className="mb-0">DataBase</h4>
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
@@ -345,9 +330,9 @@ export default function SkillsEducation() {
                 <span className="text-white">MongoDB</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-success"
+                    className={getBarClass() + " bg-success"}
                     role="progressbar"
-                    style={{ width: "90%" }}
+                    style={{ width: animate ? "90%" : "0%" }}
                     aria-valuenow="90"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -360,9 +345,9 @@ export default function SkillsEducation() {
                 <span className="text-white">GraphQl</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-secondary"
+                    className={getBarClass() + " bg-secondary"}
                     role="progressbar"
-                    style={{ width: "85%" }}
+                    style={{ width: animate ? "85%" : "0%" }}
                     aria-valuenow="85"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -375,9 +360,9 @@ export default function SkillsEducation() {
                 <span className="text-white">GraphQL</span>
                 <div className="progress">
                   <div
-                    className="progress-bar bg-danger"
+                    className={getBarClass() + " bg-danger"}
                     role="progressbar"
-                    style={{ width: "75%" }}
+                    style={{ width: animate ? "75%" : "0%" }}
                     aria-valuenow="75"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -393,7 +378,7 @@ export default function SkillsEducation() {
       {/* Animation CSS */}
       <style jsx>{`
         .animate-progress {
-          transition: width 2s cubic-bezier(0.4, 0, 0.2, 1);
+          transition: width 4s cubic-bezier(0.4, 0, 0.2, 1);
         }
       `}</style>
     </div>
