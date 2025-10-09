@@ -1,0 +1,39 @@
+
+
+.card h4 {
+  color: #00d4ff;
+}
+
+.progress {
+  height: 8px;
+  background-color: #dbdbdf;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  border-radius: 4px;
+}
+
+.text-muted {
+  color: #a0a0a0 !important;
+}
+
+.bi-code-slash, .bi-server {
+  vertical-align: middle;
+}
+
+.skills-heading {
+  font-weight: 700;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #4285f4;
+  text-shadow: 0 2px 16px rgba(66,133,244,0.15);
+  transition: color 0.4s, transform 0.4s;
+  cursor: pointer;
+}
+.skills-heading:hover {
+  color: #2563eb;
+  transform: scale(1.07);
+}
