@@ -105,6 +105,8 @@ export default function Hero() {
       zIndex: 0,
     }}
   ></div>
+
+  
       <ParticlesBackground />
       <div style={{ zIndex: 1, textAlign: "center" }}>
       <h4
