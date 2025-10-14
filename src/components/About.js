@@ -132,7 +132,7 @@ export default function About() {
                 />
                 <div>
                   <h6 className="mb-0" style={{ color: "var(--foreground)" }}>
-                    User Experience
+                    User Experience for mediative Applications
                   </h6>
                   <small style={{ color: "var(--secondary)" }}>
                     Crafting intuitive interfaces that users love
