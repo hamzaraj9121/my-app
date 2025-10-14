@@ -156,7 +156,7 @@ export default function About() {
                     Problem Solving
                   </h6>
                   <small style={{ color: "var(--secondary)" }}>
-                    Turning complex challenges into elegant solutions
+                    Turning complex
                   </small>
                 </div>
               </div>
