@@ -116,7 +116,7 @@ export default function About() {
                 className="fw-medium mb-3"
                 style={{ color: "var(--foreground)" }}
               >
-                What I Love Building
+                What I Love Building for the Web
               </h5>
 
               <div
