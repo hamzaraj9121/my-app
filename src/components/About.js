@@ -275,7 +275,7 @@ export default function About() {
                     fontWeight: "500",
                   }}
                 >
-                  2023
+                  2025
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
                   Delved into modern frameworks and libraries, enhancing my
