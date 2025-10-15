@@ -38,25 +38,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{
-        zIndex: 0,
-         marginTop: "56px",
-    background: "var(--hero-bg)",
-        position: "relative",
-        height: "calc(100vh - 80px)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        overflow: "hidden",
-        textAlign: "center",
-        padding: "0 20px",
-      }}
+      className="hero-section"
+      style={{ zIndex: 10, position: "relative" }}
     >
        <div className="color-fade fade-1"
     style={{
       position: "absolute",
-      top: "-100px",
+     
       left: "-100px",
       width: "400px",
       height: "400px",
@@ -82,7 +70,7 @@ export default function Hero() {
   <div className="color-fade fade-3"
     style={{
       position: "absolute",
-      bottom: "-100px",
+      
       right: "-100px",
       width: "400px",
       height: "400px",
@@ -95,7 +83,7 @@ export default function Hero() {
    <div className="color-fade fade-4"
     style={{
       position: "absolute",
-      top: "-100px",
+     
       right: "-100px",
       width: "400px",
       height: "400px",
@@ -269,7 +257,7 @@ export default function Hero() {
   .pulse-hover-btn:hover {
     transform: scale(1.1);
     border-color: #de2280ff;
-    color: #1de620ff;
+    color: #4919f4ff;
     
   }
 `}</style>
@@ -321,7 +309,7 @@ export default function Hero() {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #1bac33ff;
+    color: #242aedff;
     font-size: 2rem;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;

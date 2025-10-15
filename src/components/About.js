@@ -26,19 +26,7 @@ export default function About() {
 
       }}
     >
-       <div
-    style={{
-      position: "absolute",
-      top: "-100px",
-      left: "-100px",
-      width: "400px",
-      height: "400px",
-      background: "rgba(59,130,246,0.4)", // Tailwind blue-500
-      filter: "blur(200px)",
-      borderRadius: "50%",
-      zIndex: 0,
-    }}
-  ></div>
+       
    <div
     style={{
       position: "absolute",
@@ -116,13 +104,13 @@ export default function About() {
                 className="fw-medium mb-3"
                 style={{ color: "var(--foreground)" }}
               >
-                What I Love Building for the Web
+                What I Love Building
               </h5>
 
               <div
                 className="d-flex align-items-center p-3 rounded-4 shadow-sm mb-3"
                 style={{
-                  backgroundColor: "rgba(246, 247, 249, 0.7)",
+                  backgroundColor:" rgba(150, 238, 244, 0.7))",
                   borderBottom: "1px solid rgba(100, 255, 218, 0.1)",
                 }}
               >
@@ -132,7 +120,7 @@ export default function About() {
                 />
                 <div>
                   <h6 className="mb-0" style={{ color: "var(--foreground)" }}>
-                    User Experience for mediative Applications
+                    User Experience
                   </h6>
                   <small style={{ color: "var(--secondary)" }}>
                     Crafting intuitive interfaces that users love
@@ -156,7 +144,7 @@ export default function About() {
                     Problem Solving
                   </h6>
                   <small style={{ color: "var(--secondary)" }}>
-                    Turning complex
+                    Turning complex challenges into elegant solutions
                   </small>
                 </div>
               </div>
@@ -164,7 +152,7 @@ export default function About() {
               <div
                 className="d-flex align-items-center p-3 rounded-4 shadow-sm mb-2"
                 style={{
-                  backgroundColor: "rgba(246, 247, 249, 0.7)",
+                  backgroundColor: "rgba(246, 247, 249, 0.7))",
                   borderBottom: "1px solid rgba(100, 255, 218, 0.1)",
                 }}
               >
@@ -275,7 +263,7 @@ export default function About() {
                     fontWeight: "500",
                   }}
                 >
-                  2025
+                  2023
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
                   Delved into modern frameworks and libraries, enhancing my
