@@ -358,8 +358,7 @@ export default function About() {
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
                   Pursuing a Bachelor's degree in Information Technology at the
-                  University of Riphah International,  Pakistan, to deepen my
-                  understanding of technology and its applications.
+                  University of Riphah International,  Pakistan
                 </p>
               </div>
             </div>
