@@ -398,7 +398,9 @@ body[data-bs-theme='dark'] {
   --experience-bg: #020b16;
   --experience-text: #f0f0f0;
   --card-bg: #2a2828;
+   --icon-color: #fff; 
 }
+
 
 /* 🌞 Light Mode */
 body[data-bs-theme='light'] {

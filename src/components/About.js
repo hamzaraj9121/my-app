@@ -181,7 +181,7 @@ export default function About() {
             >
               My Developer Journey
             </h4>
-
+                
             {/* Timeline Item 1 */}
             <div className="d-flex align-items-start mb-4">
               <div
@@ -197,7 +197,7 @@ export default function About() {
                   boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
                 }}
               >
-                <FaCode />
+                <FaCode  style={{ color: "var(--icon-color)" }} />
               </div>
               <div
                 className="p-3 rounded-4 shadow-sm w-100"
@@ -243,7 +243,7 @@ export default function About() {
                   boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
                 }}
               >
-                <FaCode />
+                <FaCode  style={{ color: "var(--icon-color)" }} />
               </div>
               <div
                 className="p-3 rounded-4 shadow-sm mb-4"
@@ -288,7 +288,7 @@ export default function About() {
                   boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
                 }}
               >
-                <FaCode />
+                <FaCode  style={{ color: "var(--icon-color)" }} />
               </div>
               <div
                 className="p-3 rounded-4 shadow-sm mb-4"
@@ -334,7 +334,7 @@ export default function About() {
                   boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
                 }}
               >
-                <FaBriefcase />
+                <FaBriefcase  style={{ color: "var(--icon-color)" }}  />
               </div>
               <div
                 className="p-3 rounded-4 shadow-sm mb-4"

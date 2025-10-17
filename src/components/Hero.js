@@ -120,7 +120,7 @@ export default function Hero() {
           textTransform: "uppercase",
         }}
       >
-       Muhammad HAMZA
+       HAMZA
       </h1>
 
       <p
