@@ -167,13 +167,6 @@ img {
   object-fit: cover;
 }
 
-/* Navbar Styling */
-/* .navbar {
-  background-color: #06051c; /* Dark background */
-  /* padding: 15px 20px;
-  transition: background-color 0.3s ease-in-out;
-} */ */
-
 .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;

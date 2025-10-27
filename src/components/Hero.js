@@ -41,7 +41,7 @@ export default function Hero() {
       className="hero-section"
       style={{ zIndex: 10, position: "relative" }}
     >
-       <div className="color-fade fade-1"
+       <div className="color-fade fade-1 dark:hidden"
     style={{
       position: "absolute",
      
@@ -54,7 +54,7 @@ export default function Hero() {
       zIndex: 0,
     }}
   ></div>
-   <div className="color-fade fade-2"
+   <div className="color-fade fade-2 dark:hidden"
     style={{
       position: "absolute",
       bottom: "-100px",
@@ -67,19 +67,7 @@ export default function Hero() {
       zIndex: 0,
     }}
   ></div>
-  <div className="color-fade fade-3"
-    style={{
-      position: "absolute",
-      
-      right: "-100px",
-      width: "400px",
-      height: "400px",
-      background: "rgba(216, 234, 20, 0.4)", // Tailwind blue-500
-      filter: "blur(100px)",
-      borderRadius: "50%",
-      zIndex: 0,
-    }}
-  ></div>
+ 
    <div className="color-fade fade-4"
     style={{
       position: "absolute",
@@ -153,51 +141,9 @@ export default function Hero() {
             opacity: 0;
           }
         }
-            /* 🌈 Fade blobs shared styles */
-  .color-fade {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    filter: blur(100px);
-    border-radius: 50%;
-    z-index: 0;
-    transition: opacity 0.5s ease;
-  }
+          
 
-  .fade-1 {
-    top: -100px;
-    left: -100px;
-    background: rgba(59, 130, 246, 0.4); /* blue */
-  }
-  .fade-2 {
-    bottom: -100px;
-    left: -100px;
-    background: rgba(234, 20, 206, 0.4); /* pink */
-  }
-  .fade-3 {
-    bottom: -100px;
-    right: -100px;
-    background: rgba(216, 234, 20, 0.4); /* yellow */
-  }
-  .fade-4 {
-    top: -100px;
-    right: -100px;
-    background: rgba(28, 28, 236, 0.4); /* deep blue */
-  }
 
-  /* 🌞 Show fade only in LIGHT mode */
-  @media (prefers-color-scheme: light) {
-    .color-fade {
-      opacity: 1;
-    }
-  }
-
-  /* 🌙 Hide fade in DARK mode */
-  @media (prefers-color-scheme: dark) {
-    .color-fade {
-      opacity: 0;
-    }
-  }
 
       `}</style>
     

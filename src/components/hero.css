@@ -121,3 +121,8 @@ body[data-bs-theme='dark'] #hero .pulse-hover-btn:hover {
   border-color: #64ffda !important;
   color: #64ffda !important;
 }
+
+
+html[data-theme="dark"] .color-fade {
+  display: none !important;
+}

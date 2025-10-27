@@ -30,6 +30,8 @@ export default function About() {
    <div
     style={{
       position: "absolute",
+      background: "var(--experience-bg)",
+      color: "var(--experience-text)",
       bottom: "-100px",
       right: "-100px",
       width: "400px",
@@ -221,8 +223,9 @@ export default function About() {
                   2022
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
-                  Began learning programming fundamentals and web development,
-                  laying the foundation for a career in tech.
+                 I started my coding journey out of curiosity and quickly fell in love with building product-ready web apps. Over time I’ve focused on front-end 
+                 engineering with React and TypeScript while strengthening backend skills in Node.js and MongoDB. I enjoy turning complex problems into simple
+                 , maintainable code and shipping features that real users find valuable
                 </p>
               </div>
             </div>
@@ -266,8 +269,14 @@ export default function About() {
                   2023
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
-                  Delved into modern frameworks and libraries, enhancing my
-                  skills in building dynamic and responsive web applications.
+                 I actively explore modern frameworks, tools, and programming practices to stay updated with the industry. I enjoy learning how technologies work and applying them in real projects. Recently, I’ve been working with:
+
+React & Next.js for front-end development
+
+Node.js & Express for APIs
+
+MongoDB for database management
+I focus on writing scalable, reusable components and improving performance and user experience.
                 </p>
               </div>
             </div>
@@ -311,9 +320,16 @@ export default function About() {
                   2023 - Present
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
-                  Pursuing a Bachelor's degree in Information Technology at the
-                  University of Riphah International Pakistan, to deepen my
-                  understanding of technology and its applications.
+                  I strengthened my technical foundation through formal IT education and consistent self-learning. This helped me build strong knowledge in:
+
+Software development fundamentals
+
+Web application architecture
+
+Database design
+
+Networking and operating systems fundamentals
+My education has guided my professional approach to writing structured, efficient, and maintainable code.
                 </p>
               </div>
             </div>
