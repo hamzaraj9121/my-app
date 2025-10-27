@@ -159,7 +159,7 @@ export default function Hero() {
     }}
   >
     A passionate developer turning ideas into modern, interactive, and visually
-    stunning web experiences.
+    stunning
   </p>
 </div>
 
