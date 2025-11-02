@@ -5,6 +5,23 @@ import { MdEmail } from "react-icons/md";
 import "@/app/globals.css";
 import ParticlesBackground from "./ParticlesBackground";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+
+
+const textVariant = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (delay = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  }),
+};
+
 
 
 export default function Hero() {
@@ -85,44 +102,58 @@ export default function Hero() {
   
       <ParticlesBackground />
       <div style={{ zIndex: 1, textAlign: "center" }}>
-      <h4
-        style={{
-          marginTop: "80px",
-          fontSize: "1.5rem",
-          fontWeight: 500,
-          color: "var(--secondary)",
-          marginBottom: "0.5rem",
-        }}
-      >
-        Hello, I'm
-      </h4>
+    <motion.h4
+  variants={textVariant}
+  initial="hidden"
+  animate="visible"
+  custom={0.1}
+  style={{
+    marginTop: "80px",
+    fontSize: "1.5rem",
+    fontWeight: 500,
+    color: "var(--secondary)",
+    marginBottom: "0.5rem",
+  }}
+>
+  Hello, I'm
+</motion.h4>
 
-      <h1
-        style={{
-          fontWeight: 700,
-          fontSize: "3.8rem",
-          letterSpacing: "2px",
-          color: "var(--hero-text)",
-          marginBottom: "1.5rem",
-          textShadow: "0 4px 12px rgba(0,0,0,0.5)",
-          textTransform: "uppercase",
-        }}
-      >
-       HAMZA
-      </h1>
 
-      <p
-        style={{
-          fontSize: "1.3rem",
-          color: "var(--accent)",
-          marginBottom: "2rem",
-          letterSpacing: "1px",
-          display: "inline-block",
-        }}
-      >
-        {text}
-        <span className="cursor"></span>
-      </p>
+    <motion.h1
+  variants={textVariant}
+  initial="hidden"
+  animate="visible"
+  custom={0.3}
+  style={{
+    fontWeight: 700,
+    fontSize: "3.8rem",
+    letterSpacing: "2px",
+    color: "var(--hero-text)",
+    marginBottom: "1.5rem",
+    textShadow: "0 4px 12px rgba(0,0,0,0.5)",
+    textTransform: "uppercase",
+  }}
+>
+  HAMZA
+</motion.h1>
+
+      
+<motion.p
+  variants={textVariant}
+  initial="hidden"
+  animate="visible"
+  custom={0.5}
+  style={{
+    fontSize: "1.3rem",
+    color: "var(--accent)",
+    marginBottom: "2rem",
+    letterSpacing: "1px",
+    display: "inline-block",
+  }}
+>
+  {text}
+  <span className="cursor"></span>
+</motion.p>
 
       <style jsx>{`
         .cursor {
@@ -133,6 +164,8 @@ export default function Hero() {
           animation: blink 0.7s infinite;
         }
 
+
+        
         @keyframes blink {
           0%, 50%, 100% {
             opacity: 1;
@@ -148,19 +181,23 @@ export default function Hero() {
       `}</style>
     
 
-  <p
-    style={{
-      fontSize: "1.1rem",
-      fontWeight: 500,
-      color: "var(--foreground)",
-      marginBottom: "2rem",
-      maxWidth: "600px",
-      marginInline: "auto",
-    }}
-  >
-    A passionate developer turning ideas into modern, interactive, and visually
-    stunning
-  </p>
+ <motion.p
+  variants={textVariant}
+  initial="hidden"
+  animate="visible"
+  custom={0.8}
+  style={{
+    fontSize: "1.1rem",
+    fontWeight: 500,
+    color: "var(--foreground)",
+    marginBottom: "2rem",
+    maxWidth: "600px",
+    marginInline: "auto",
+  }}
+>
+  A passionate developer turning ideas into modern, interactive, and visually
+  stunning web experiences.
+</motion.p>
 </div>
 
 

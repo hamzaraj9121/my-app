@@ -45,8 +45,11 @@ export default function SkillsEducation() {
       className="skills-heading"
       variants={headingVariant}
       initial="hidden"
-      animate="visible"
-      style={{
+whileInView="visible"
+viewport={{ once: true, amount: 0.2 }}
+       transition={{ duration: 0.8, ease: "easeOut" }} 
+
+           style={{
         fontWeight: 700,
         fontSize: "2.5rem",
         letterSpacing: "2px",
@@ -90,80 +93,116 @@ export default function SkillsEducation() {
               </span>
               </div>
               <p className="text-muted mb-4">Crafting beautiful, responsive user interfaces</p>
-              <div className="mb-2">
-                <span className="text-white">React</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "95%" : "0%" }}
-                    aria-valuenow="95"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              </div>
+             
+<div className="mb-2">
+  <span className="skill-label text-muted">React</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#f10000ff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "95%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
 
-             <span className="text-white">Typescript</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "70%" : "0%" }}
-                    aria-valuenow="70"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    95%
-                  </div>
-                </div>
-              <div className="mb-2">
-                <span className="text-white">Next.js</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "80%" : "0%" }}
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    80%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">Tailwind CSS</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "92%" : "0%" }}
-                    aria-valuenow="92"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    92%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">Framer Motion</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "85%" : "0%" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
+                  
+                
+             
+          <div className="mb-2">
+            <span className="skill-label">Typescript</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      initial={{ width: 0 }}
+      style={{ backgroundColor: "#00ff66ff" }}
+      whileInView={{ width: "90%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="90"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+          <div className="mb-2">
+            <span className="skill-label">Next.Js</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#1e00ffff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "80%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="80"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+
+
+
+            <div className="mb-2">
+              <span className="skill-label">Tailwind.css</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#00fffbff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "95%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+
+
+
+            <div className="mb-2">
+              <span className="skill-label">React</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      style={{ backgroundColor: "#ff00c8ff" }}
+      role="progressbar"
+      initial={{ width: 0 }}
+      whileInView={{ width: "80%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="80"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
             </motion.div>
           </div>
 
@@ -172,6 +211,7 @@ export default function SkillsEducation() {
             <motion.div
               className="card p-3 text-white rounded-3"
               variants={cardVariant}
+             
               initial="hidden"
               animate="visible"
               whileHover={{ scale: 1.03, boxShadow: "0 4px 24px rgba(100,255,218,0.12)" }}
@@ -191,66 +231,90 @@ export default function SkillsEducation() {
 
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
-              <div className="mb-2">
-                <span className="text-white">Node.js</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "90%" : "0%" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    90%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">Express.js</span>
-                <div className="progress">
-                  <div
-                    className="progress-bar bg-secondary animate-progress"
-                    role="progressbar"
-                    style={{ width: animate ? "85%" : "0%" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">GraphQL</span>
-                <div className="progress">
-                  <div
-                    className="progress-bar bg-danger animate-progress"
-                    role="progressbar"
-                    style={{ width: animate ? "75%" : "0%" }}
-                    aria-valuenow="75"
-                                                       aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    75%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">REST API</span>
-                <div className="progress">
-                  <div        
-                    className="progress-bar bg-warning animate-progress"
-                    role="progressbar"
-                    style={{ width: animate ? "88%" : "0%" }}
-                    aria-valuenow="88"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    88%
-                  </div>
-                </div>
-              </div>
+          <div className="mb-2">
+            <span className="skill-label">Node.js</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#00fbffff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "80%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="80"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      80%
+    </motion.div>
+  </div>
+</div>
+
+            <div className="mb-2">
+              <span className="skill-label">Express.js</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#2b08f7ff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "75%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+            <div className="mb-2">
+              <span className="skill-label">GraphQL</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      initial={{ width: 0 }}
+      whileInView={{ width: "70%" }}
+      style={{ backgroundColor: "#fd0303ff" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="70"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+
+
+          <div className="mb-2">
+            <span className="skill-label">Rest API</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#b7f50aff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "80%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+
+
             </motion.div>
           </div>
           <div className="col-md-6 mb-4">
@@ -268,51 +332,67 @@ export default function SkillsEducation() {
                 <h4 className="mb-0">DevOps</h4>
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
-              <div className="mb-2">
-                <span className="text-white">SLack</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "90%":"0%" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    90%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">Git & GitHub</span>
-                <div className="progress">
-                  <div
-                    className="progress-bar bg-secondary"
-                    role="progressbar"
-                    style={{ width: "85%" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">Trello</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass()}
-                    role="progressbar"
-                    style={{ width: animate ? "85%" : "0%", backgroundColor: "#a73f1fff" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
+            <div className="mb-2">
+              <span className="skill-label">Slack</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+
+    style={{ backgroundColor: "#0089f9ff" }}
+      role="progressbar"
+      initial={{ width: 0 }}
+      whileInView={{ width: "95%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+          <div className="mb-2">
+            <span className="skill-label">Git & Github</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#26f806ff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "90%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="90"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+            <div className="mb-2">
+              <span className="skill-label">Trello</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#8800ffff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "95%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="95"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
             </div>
           </div>
           <div className="col-md-6 mb-4">
@@ -331,66 +411,87 @@ export default function SkillsEducation() {
                 <h4 className="mb-0">DataBase</h4>
               </div>
               <p className="text-muted mb-4">Building robust, scalable server-side applications</p>
+            <div className="mb-2">
+              <span className="skill-label">MongoDB</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      initial={{ width: 0 }}
+      style={{ backgroundColor: "#eaff00ff" }}
+      whileInView={{ width: "75%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="75"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
               <div className="mb-2">
-                <span className="text-white">MongoDB</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass() + " bg-success"}
-                    role="progressbar"
-                    style={{ width: animate ? "90%" : "0%" }}
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    90%
-                  </div>
-                </div>
-              </div>
-                <div className="mb-2">
-                <span className="text-white">Oracle</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass() + " bg-secondary"}
-                    role="progressbar"
-                    style={{ width: animate ? "85%" : "0%" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">MYSQl</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass() + " bg-secondary"}
-                    role="progressbar"
-                    style={{ width: animate ? "85%" : "0%" }}
-                    aria-valuenow="85"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    85%
-                  </div>
-                </div>
-              </div>
-              <div className="mb-2">
-                <span className="text-white">GraphQL</span>
-                <div className="progress">
-                  <div
-                    className={getBarClass() + " bg-danger"}
-                    role="progressbar"
-                    style={{ width: animate ? "75%" : "0%" }}
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  >
-                    75%
-                  </div>
-                </div>
-              </div>
+                <span className="skill-label">Oracle</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      role="progressbar"
+      style={{ backgroundColor: "#ff0000ff" }}
+      initial={{ width: 0 }}
+      whileInView={{ width: "95%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="70"
+      aria-valuemin="0"
+      aria-valuemax="70"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+            <div className="mb-2">
+              <span className="skill-label">MySQL</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass()}
+      style={{ backgroundColor: "#1100ffff" }}
+      role="progressbar"
+      initial={{ width: 0 }}
+      whileInView={{ width: "85%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="85"
+      aria-valuemin="0"
+
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
+            <div className="mb-2">
+              <span className="skill-label" >GraphQl</span>
+  <div className="progress">
+    <motion.div
+      className={getBarClass() + "bg-danger"}
+      role="progressbar"
+      initial={{ width: 0 }}
+      style={{ backgroundColor: "#ffd000ff" }}
+      whileInView={{ width: "85%" }}
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }}
+      aria-valuenow="85"
+      aria-valuemin="0"
+      aria-valuemax="100"
+    >
+      95%
+    </motion.div>
+  </div>
+</div>
+
             </div>
           </div>
         </div>

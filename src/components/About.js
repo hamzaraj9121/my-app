@@ -7,6 +7,7 @@ import {
   FaReadme,
 } from "react-icons/fa";
 import { TbBubbleTea } from "react-icons/tb";
+import { motion } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa6";
 import Link from "next/link";
 import ParticlesBackground from "./ParticlesBackground"; // Adjust the import based on your file structure
@@ -57,15 +58,30 @@ export default function About() {
         >
           Get to Know Me
         </h6>
-        <h2 className="mb-5 text-center fs-1 fw-bolder">
-          About <span style={{ color: "var(--accent)" }}>Me</span>
-        </h2>
+      
+          <motion.h2
+        className="mb-5 text-center fs-1 fw-bolder"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        About Me
+      </motion.h2>
+        
+
 
         <div className="row g-4">
           {/* Left: My Mission */}
+
           <div className="col-lg-6">
-            <div
+            
+            <motion.div
               className="p-4 rounded-4 shadow-sm mb-4"
+                initial={{ opacity: 0, y: 50 }} // start slightly down and invisible
+      whileInView={{ opacity: 1, y: 0 }} // move up into place
+      transition={{ duration: 0.6, ease: 'easeOut' }} // smooth animation
+      viewport={{ once: true, amount: 0.3 }} // animates once when 30% visible
               style={{
                 backgroundColor: "var(--navy-light)",
                 borderLeft: "2px solid var(--accent)",
@@ -93,10 +109,14 @@ export default function About() {
                 possibilities they bring to create meaningful digital
                 experiences.
               </p>
-            </div>
+            </motion.div>
 
-            <div
+            <motion.div
               className="p-4 rounded-4 shadow-sm"
+                initial={{ opacity: 0, y: 50 }} // start slightly down and invisible
+      whileInView={{ opacity: 1, y: 0 }} // move up into place
+      transition={{ duration: 0.6, ease: 'easeOut' }} // smooth animation
+      viewport={{ once: true, amount: 0.3 }} // animates once when 30% visible
               style={{
                 backgroundColor: "var(--navy-light)",
                 borderLeft: "2px solid var(--accent)",
@@ -172,7 +192,7 @@ export default function About() {
                 </div>
               </div>
               {/* Add more items here if needed */}
-            </div>
+            </motion.div>
           </div>
 
           {/* Right: My Developer Journey */}
@@ -185,7 +205,11 @@ export default function About() {
             </h4>
                 
             {/* Timeline Item 1 */}
-            <div className="d-flex align-items-start mb-4">
+            <motion.div className="d-flex align-items-start mb-4"
+              initial={{ opacity: 0, x: -50 }} 
+  whileInView={{ opacity: 1, x: 0 }} 
+  transition={{ duration: 0.6, ease: 'easeOut' }} 
+  viewport={{ once: true, amount: 0.3 }} >
               <div
                 className="timeline-icon rounded-circle me-3"
                 style={{
@@ -223,18 +247,21 @@ export default function About() {
                   2022
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
-                 I started my coding journey out of curiosity and quickly fell in love with building product-ready web apps. Over time I’ve focused on front-end 
-                 engineering with React and TypeScript while strengthening backend skills in Node.js and MongoDB. I enjoy turning complex problems into simple
-                 , maintainable code and shipping features that real users find valuable
+                Began learning programming fundamentals and web development,
+                 laying the foundation for a career in tech.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Timeline Item 2 */}
 
-            <div className="d-flex align-items-start">
-              <div
-                className="timeline-icon rounded-circle me-3"
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }} >
+              <div className="timeline-icon rounded-circle me-3"
+                
                 style={{
                   backgroundColor: "var(--accent)",
                   color: "var(--background)",
@@ -246,7 +273,7 @@ export default function About() {
                   boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
                 }}
               >
-                <FaCode  style={{ color: "var(--icon-color)" }} />
+                <FaBriefcase  style={{ color: "var(--icon-color)" }}  />
               </div>
               <div
                 className="p-3 rounded-4 shadow-sm mb-4"
@@ -269,21 +296,20 @@ export default function About() {
                   2023
                 </span>
                 <p className="mb-0" style={{ color: "var(--secondary)" }}>
-                 I actively explore modern frameworks, tools, and programming practices to stay updated with the industry. I enjoy learning how technologies work and applying them in real projects. Recently, I’ve been working with:
-
-React & Next.js for front-end development
-
-Node.js & Express for APIs
-
-MongoDB for database management
-I focus on writing scalable, reusable components and improving performance and user experience.
+                Completed my first internship as a web developer, 
+                where I contributed to real-world projects, improved my coding skills
+                , and gained valuable experience collaborating with a professional team.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Timeline Item 3 */}
 
-            <div className="d-flex align-items-start">
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }}   >
               <div
                 className="timeline-icon rounded-circle me-3"
                 style={{
@@ -324,19 +350,19 @@ I focus on writing scalable, reusable components and improving performance and u
 
 Software development fundamentals
 
-Web application architecture
-
-Database design
-
 Networking and operating systems fundamentals
 My education has guided my professional approach to writing structured, efficient, and maintainable code.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Timeline Item 4 */}
 
-            <div className="d-flex align-items-start">
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }}     >
               <div
                 className="timeline-icon rounded-circle me-3"
                 style={{
@@ -378,7 +404,7 @@ My education has guided my professional approach to writing structured, efficien
                   of technology and its applicati
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

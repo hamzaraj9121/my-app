@@ -4,6 +4,17 @@
   color: #00d4ff;
 }
 
+/* Skill label color adapts to theme */
+.skill-label {
+  color: #ffffff;
+
+}
+
+/* In light mode show labels as black for better contrast */
+body[data-bs-theme='light'] .skill-label {
+  color: #000000 !important;
+}
+
 .progress {
   height: 8px;
   background-color: #dbdbdf;
