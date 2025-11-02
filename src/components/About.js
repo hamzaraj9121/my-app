@@ -288,7 +288,7 @@ export default function About() {
                 <span
                   className="badge mb-2"
                   style={{
-                    backgroundColor: "rgba(100, 255, 218, 0.1)",
+                    backgroundColor: "rgba(202, 102, 14, 0.1)",
                     color: "var(--accent)",
                     fontWeight: "500",
                   }}
