@@ -1,5 +1,6 @@
+"use client";
 import ProjectCard from './ProjectCard';
-
+import { motion } from 'framer-motion';
 export default function Projects() {
     const projects = [
         {
@@ -75,10 +76,21 @@ export default function Projects() {
   ></div>
           
               <h6 className="text-uppercase text-center mb-2" style={{ color: "var(--accent)", letterSpacing: "2px", fontWeight: "600" }}>My Recent Work</h6>
-              <h2 className="mb-5 text-center fs-1 fw-bolder">
+              <motion.h2
+               initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6, ease: 'easeOut' }} 
+              viewport={{ once: true, amount: 0.3 }}
+               className="mb-5 text-center fs-1 fw-bolder">
                 Featured <span style={{ color: "var(--accent)" }}>Projects</span>
-              </h2>
-                <h2
+              </motion.h2>
+                <motion.h2
+                 
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6, ease: 'easeOut' }} 
+              viewport={{ once: true, amount: 0.3 }}
+
                     className="text-center"
                     style={{
                         fontSize: "3rem", // Match the Hero section heading size
@@ -89,7 +101,7 @@ export default function Projects() {
                     }}
                 >
                     My Projects
-                </h2>
+                </motion.h2>
                 <p className="text-center position-relative">
                     Here are some of the projects I’ve worked on recently.
                 </p>

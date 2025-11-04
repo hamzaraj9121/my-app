@@ -1,3 +1,4 @@
+"use client";
 import {
   FaNodeJs,
   FaReact,
@@ -11,6 +12,7 @@ import {
   FaFacebook,
   FaUsers, // Import Team Leadership Icon
 } from "react-icons/fa";
+import { motion } from "framer-motion";
 import { BsChatDots } from "react-icons/bs";
 import { FaBootstrap } from "react-icons/fa6";
 
@@ -85,9 +87,16 @@ export default function Experience() {
      
         <section id="experience" className="py-5">
           <div className="container">
-             <h2 className="text-center mb-4" style={{ fontSize: "2.5rem", fontWeight: "600", color: "var(--experience-text)" }}>
+             <motion.h2 
+              className="text-center mb-4"  
+              style={{ fontSize: "2.5rem", fontWeight: "600", color: "var(--experience-text)" }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6, ease: 'easeOut' }} 
+              viewport={{ once: true, amount: 0.3 }}
+            >
               Experience
-            </h2>
+            </motion.h2>
             <div className="row" style={{  zIndex: 0,}}>
                 {/* Blue blur - top left */}
   <div

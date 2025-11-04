@@ -255,15 +255,16 @@ export default function ContactForm() {
               <i className="bi bi-envelope me-2"></i>
              <span> <MdOutlineMail /></span> <span className="ms-2">Email</span>
             </div>
-            <div className="status-card d-flex flex-column p-3 mb-3"  style={{ animation: "blink 3s infinite" ,
-    background: "var(--experience-bg) ",
-              
-        color: "var(--experience-text)"}}>
+            <div className="status-card d-flex flex-column p-3 mb-3 border-blink"  style={{
+                background: "var(--experience-bg)",
+                color: "var(--experience-text)",
+                position: "relative"
+              }}>
               <div className="d-flex align-items-center mb-2">
                 <span className="status-dot me-2"></span>
                 <h6 className="mb-0 text-success fw-bold">Available for work</h6>
               </div>
-              <p className="mb-0 text-light-emphasis" >
+              <p className="mb-0 text-light-emphasis">
                 I'm currently available for freelance projects and full-time opportunities.
               </p>
             </div>
