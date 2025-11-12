@@ -29,7 +29,7 @@ export default function ParticlesBackground() {
             value: "#64ffda", // Teal accent color for particles
           },
           size: {
-            value: 3, // Size of particles
+            value: 2, // Size of particles
           },
           move: {
             enable: true,
@@ -41,7 +41,7 @@ export default function ParticlesBackground() {
           },
           links: {
             enable: true, // Enable links between particles
-            distance: 150, // Distance for linking
+            distance: 100, // Distance for linking
             color: "#8892b0", // Light blue-gray for links
             opacity: 0.5,
             width: 1,
@@ -53,10 +53,10 @@ export default function ParticlesBackground() {
               enable: true, // Enable hover effect
               mode: "repulse", // Particles move away on hover
             },
-            onClick: {
-              enable: true, // Enable click effect
-              mode: "push", // Add particles on click
-            },
+            // onClick: {
+            //   enable: true, // Enable click effect
+            //   mode: "push", // Add particles on click
+            // },
           },
           modes: {
             repulse: {

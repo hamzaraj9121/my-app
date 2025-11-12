@@ -167,12 +167,20 @@ img {
   object-fit: cover;
 }
 
-.navbar-brand {
+
+body[data-bs-theme='light'] .navbar-brand{
+  color: #000 ;
+    font-size: 1.5rem;
+  font-weight: bold;
+ }
+
+
+ body[data-bs-theme='dark'] .navbar-brand {
+  color: #fff ;
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ffffff;
- 
 }
+
 
 
 
@@ -299,7 +307,7 @@ body[data-bs-theme='light'] .nav-link {
 }
 
 body[data-bs-theme='light'] .nav-link:hover {
-  color: #64ffda !important;
+  color: rgb(100, 113, 255) !important;
 }
 
 /* 🌚 Dark mode */
@@ -318,7 +326,7 @@ body[data-bs-theme='dark'] .nav-link {
 }
 
 body[data-bs-theme='dark'] .nav-link:hover {
-  color: #64ffda !important;
+  color: #6964ff !important;
 }
 
 
@@ -363,7 +371,7 @@ body[data-bs-theme='dark'] {
   --background: transparent;
   --foreground: #ffffff;
   --secondary: #b0b0b0;
-  --accent: #6471ff;
+  --accent: rgb(100, 113, 255);
   --card-bg: #0a192f;
 
 }
@@ -435,7 +443,7 @@ body[data-bs-theme='light'] {
 }
 
 .fill-button:hover {
-  color: #000; /* text color turns dark when background fills */
+  color: #f9f9f9; /* text color turns dark when background fills */
 }
 
 .fill-button:hover::before {

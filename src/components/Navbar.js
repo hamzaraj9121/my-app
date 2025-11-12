@@ -42,7 +42,7 @@ export default function Navbar() {
     >
       <div className="container d-flex justify-content-between align-items-center">
         {/* Brand */}
-        <a className="navbar-brand fw-bold" href="/">Muhammad Hamza</a>
+        <a className="navbar-brand fw-bold" href="/">MH</a>
 
         {/* ✅ Desktop Menu */}
         <div className="collapse navbar-collapse d-none d-lg-block" id="navbarNav">

@@ -18,7 +18,7 @@ export default function About() {
       className="py-5 about-section"
       style={{
         
-        background: "var(--background)", // Using our new background variable
+        background: "#1b1c45", // solid blue background
         color: "var(--foreground)", // Using our new foreground variable
         padding: "60px 20px", // Increased padding for better spacing
         textAlign: "center", // Center align all content

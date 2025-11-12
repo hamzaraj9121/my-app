@@ -320,10 +320,9 @@ export default function Hero() {
           }}
         >
 
-        <a href="#projects" className="fill-button">
-  VIEW WORK
-</a>
-
+      <a href="\Hamza's Resume (1).pdf" download className="fill-button">
+    Resume
+  </a>
          <a href="#projects" className="fill-button">
   Get In Touch
 </a>
