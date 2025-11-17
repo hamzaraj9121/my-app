@@ -284,7 +284,7 @@ export default function Hero() {
           }}
         >
 
-      <a href="\Hamza's Resume (1).pdf" download className="fill-button">
+      <a href="/Hamzaresume.pdf" download className="fill-button">
     Resume
   </a>
          <a href="#projects" className="fill-button">
