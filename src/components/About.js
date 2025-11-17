@@ -1,0 +1,413 @@
+"use client";
+import {
+  FaCode,
+  FaBriefcase,
+  FaHeart,
+  PiBowlSteamFill,
+  FaReadme,
+} from "react-icons/fa";
+import { TbBubbleTea } from "react-icons/tb";
+import { motion } from "framer-motion";
+import { FaGraduationCap } from "react-icons/fa6";
+import Link from "next/link";
+import ParticlesBackground from "./ParticlesBackground"; // Adjust the import based on your file structure
+
+export default function About() {
+  return (
+    <section
+      className="py-5 about-section"
+      style={{
+        background: "var(--experience-bg)",
+    color: "var(--experience-text)",
+      
+        padding: "60px 20px", // Increased padding for better spacing
+        textAlign: "center", // Center align all content
+        position: "relative", // Position relative for absolute children
+         transition: "background-color 0.4s ease, color 0.4s ease",
+
+      }}
+    >
+       
+   <div
+    style={{
+      position: "absolute",
+      background: "var(--experience-bg)",
+      color: "var(--experience-text)",
+      bottom: "-100px",
+      right: "-100px",
+      width: "400px",
+      height: "400px",
+      background: "rgba(147,51,234,0.4)", // Tailwind purple-600
+      filter: "blur(200px)",
+      borderRadius: "50%",
+      zIndex: 0,
+    }}
+  ></div>
+      <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+        {/* <ParticlesBackground /> */}
+      </div>
+      <div className="container">
+        {/* Section Title */}
+        <h6
+          className="text-uppercase text-center"
+          style={{
+            color: "var(--accent)",
+            letterSpacing: "2px",
+            fontWeight: "600",
+          }}
+        >
+          Get to Know me
+        </h6>
+      
+          <motion.h2
+        className="mb-5 text-center fs-1 fw-bolder"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        About Me
+      </motion.h2>
+        
+
+
+        <div className="row g-4">
+          {/* Left: My Mission */}
+
+          <div className="col-lg-6">
+            
+            <motion.div
+              className="p-4 rounded-4 shadow-sm mb-4"
+                initial={{ opacity: 0, y: 50 }} // start slightly down and invisible
+      whileInView={{ opacity: 1, y: 0 }} // move up into place
+      transition={{ duration: 0.6, ease: 'easeOut' }} // smooth animation
+      viewport={{ once: true, amount: 0.3 }} // animates once when 30% visible
+              style={{
+                backgroundColor: "var(--navy-light)",
+                borderLeft: "2px solid var(--accent)",
+              }}
+            >
+              <h4
+                className="fw-medium mb-3"
+                style={{ color: "var(--foreground)" }}
+              >
+                My Mission
+              </h4>
+              <p style={{ color: "var(--secondary)", lineHeight: "1.8" }}>
+                I believe technology should be a bridge that connects people and
+                solves real-world problems. My passion lies in crafting digital
+                experiences that are not just functional, but delightful and
+                accessible to everyone.
+              </p>
+              <p
+                className="mb-0"
+                style={{ color: "var(--secondary)", lineHeight: "1.8" }}
+              >
+                When I'm not coding, you'll find me exploring new frameworks,
+                contributing to open source, or mentoring aspiring developers. I
+                love the constant evolution of web technologies and the endless
+                possibilities they bring to create meaningful digital
+                experiences.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="p-4 rounded-4 shadow-sm"
+                initial={{ opacity: 0, y: 50 }} // start slightly down and invisible
+      whileInView={{ opacity: 1, y: 0 }} // move up into place
+      transition={{ duration: 0.6, ease: 'easeOut' }} // smooth animation
+      viewport={{ once: true, amount: 0.3 }} // animates once when 30% visible
+              style={{
+                backgroundColor: "var(--navy-light)",
+                borderLeft: "2px solid var(--accent)",
+              }}
+            >
+              <h5
+                className="fw-medium mb-3"
+                style={{ color: "var(--foreground)" }}
+              >
+                What I Love Building
+              </h5>
+
+              <div
+                className="d-flex align-items-center p-3 rounded-4 shadow-sm mb-3"
+                style={{
+                  backgroundColor:" rgba(150, 238, 244, 0.7))",
+                  borderBottom: "1px solid rgba(100, 255, 218, 0.1)",
+                }}
+              >
+                <FaHeart
+                  className="me-3"
+                  style={{ color: "var(--accent)", fontSize: "1.2rem" }}
+                />
+                <div>
+                  <h6 className="mb-0" style={{ color: "var(--foreground)" }}>
+                    User Experience
+                  </h6>
+                  <small style={{ color: "var(--secondary)" }}>
+                    Crafting intuitive interfaces that users love
+                  </small>
+                </div>
+              </div>
+
+              <div
+                className="d-flex align-items-center p-3 rounded-4 shadow-sm mb-3"
+                style={{
+                  backgroundColor: "rgba(244, 244, 244, 0.7))",
+                  borderBottom: "1px solid rgba(100, 255, 218, 0.1)",
+                }}
+              >
+                <TbBubbleTea
+                  className="me-3"
+                  style={{ color: "var(--accent)", fontSize: "1.2rem" }}
+                />
+                <div>
+                  <h6 className="mb-0" style={{ color: "var(--foreground)" }}>
+                    Problem Solving
+                  </h6>
+                  <small style={{ color: "var(--secondary)" }}>
+                    Turning complex challenges into elegant solutions
+                  </small>
+                </div>
+              </div>
+
+              <div
+                className="d-flex align-items-center p-3 rounded-4 shadow-sm mb-2"
+                style={{
+                  backgroundColor: "rgba(246, 247, 249, 0.7))",
+                  borderBottom: "1px solid rgba(100, 255, 218, 0.1)",
+                }}
+              >
+                <FaReadme
+                  className="me-3"
+                  style={{ color: "var(--accent)", fontSize: "1.2rem" }}
+                />
+                <div>
+                  <h6 className="mb-0" style={{ color: "var(--foreground)" }}>
+                    Continuous Learning
+                  </h6>
+                  <small style={{ color: "var(--secondary)" }}>
+                    Always exploring new technologies and best practices
+                  </small>
+                </div>
+              </div>
+              {/* Add more items here if needed */}
+            </motion.div>
+          </div>
+
+          {/* Right: My Developer Journey */}
+          <div className="col-lg-6 timeline-wrapper">
+            <h4
+              className="fw-medium mb-4"
+              style={{ color: "var(--foreground)" }}
+            >
+              My Developer Journey
+            </h4>
+                
+            {/* Timeline Item 1 */}
+            <motion.div className="d-flex align-items-start mb-4"
+              initial={{ opacity: 0, x: -50 }} 
+  whileInView={{ opacity: 1, x: 0 }} 
+  transition={{ duration: 0.6, ease: 'easeOut' }} 
+  viewport={{ once: true, amount: 0.3 }} >
+              <div
+                className="timeline-icon rounded-circle me-3"
+                style={{
+                  backgroundColor: "var(--accent)",
+                  color: "var(--background)",
+                  width: "40px",
+                  height: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
+                }}
+              >
+                <FaCode  style={{ color: "var(--icon-color)" }} />
+              </div>
+              <div
+                className="p-3 rounded-4 shadow-sm w-100"
+                style={{
+                  backgroundColor: "var(--navy-light)",
+                  borderLeft: "2px solid var(--accent)",
+                }}
+              >
+                <h5 className="mb-1" style={{ color: "var(--foreground)" }}>
+                  Started My Coding Journey
+                </h5>
+                <span
+                  className="badge mb-2"
+                   style={{
+    background: "linear-gradient(135deg, rgba(245, 246, 247, 0.9), rgba(142, 174, 238, 0.7))",
+    borderLeft: "2px solid var(--accent)",
+    boxShadow: "0 10px 25px rgba(151, 113, 231, 0.2)",
+    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+  }}
+                >
+                  2022
+                </span>
+                <p className="mb-0" style={{ color: "var(--secondary)" }}>
+                Began learning programming fundamentals and web development,
+                 laying the foundation for a career in tech.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Timeline Item 2 */}
+
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }} >
+              <div className="timeline-icon rounded-circle me-3"
+                
+                style={{
+                  backgroundColor: "var(--accent)",
+                  color: "var(--background)",
+                  width: "40px",
+                  height: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
+                }}
+              >
+                <FaBriefcase  style={{ color: "var(--icon-color)" }}  />
+              </div>
+              <div
+                className="p-3 rounded-4 shadow-sm mb-4"
+                style={{
+                  backgroundColor: "var(--navy-light)",
+                  borderLeft: "2px solid var(--accent)",
+                }}
+              >
+                <h5 className="mb-1" style={{ color: "var(--foreground)" }}>
+                  Exploring New Technologies
+                </h5>
+                <span
+                  className="badge mb-2"
+                  style={{
+                    backgroundColor: "rgba(202, 102, 14, 0.1)",
+                    color: "var(--accent)",
+                    fontWeight: "500",
+                  }}
+                >
+                  2023
+                </span>
+                <p className="mb-0" style={{ color: "var(--secondary)" }}>
+                Completed my first internship as a web developer, 
+                where I contributed to real-world projects, improved my coding skills
+                , and gained valuable experience collaborating with a professional team.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Timeline Item 3 */}
+
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }}   >
+              <div
+                className="timeline-icon rounded-circle me-3"
+                style={{
+                  backgroundColor: "var(--accent)",
+                  color: "var(--background)",
+                  width: "40px",
+                  height: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
+                }}
+              >
+                <FaCode  style={{ color: "var(--icon-color)" }} />
+              </div>
+              <div
+                className="p-3 rounded-4 shadow-sm mb-4"
+                style={{
+                  backgroundColor: "var(--navy-light)",
+                  borderLeft: "2px solid var(--accent)",
+                }}
+              >
+                <h5 className="mb-1" style={{ color: "var(--foreground)" }}>
+                  Information Technology Education
+                </h5>
+                <span
+                  className="badge mb-2"
+                  style={{
+                    backgroundColor: "rgba(100, 255, 218, 0.1)",
+                    color: "var(--accent)",
+                    fontWeight: "500",
+                  }}
+                >
+                  2023 - Present
+                </span>
+                <p className="mb-0" style={{ color: "var(--secondary)" }}>
+                  I strengthened my technical foundation through formal IT education and consistent self-learning. This helped me build strong knowledge in:
+
+Software development fundamentals
+
+Networking and operating systems fundamentals
+My education has guided my professional approach to writing structured, efficient, and maintainable code.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Timeline Item 4 */}
+
+            <motion.div className="d-flex align-items-start"
+                initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }} 
+      transition={{ duration: 0.6, ease: 'easeOut' }} 
+      viewport={{ once: true, amount: 0.3 }}     >
+              <div
+                className="timeline-icon rounded-circle me-3"
+                style={{
+                  backgroundColor: "var(--accent)",
+                  color: "var(--background)",
+                  width: "40px",
+                  height: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "0 0 10px rgba(100, 255, 218, 0.3)",
+                }}
+              >
+                <FaBriefcase  style={{ color: "var(--icon-color)" }}  />
+              </div>
+              <div
+                className="p-3 rounded-4 shadow-sm mb-4"
+                style={{
+                  backgroundColor: "var(--navy-light)",
+                  borderLeft: "2px solid var(--accent)",
+                }}
+              >
+                <h5 className="mb-1" style={{ color: "var(--foreground)" }}>
+                  Freelance and Open source
+                </h5>
+                <span
+                  className="badge mb-2"
+                  style={{
+                    backgroundColor: "rgba(100, 255, 218, 0.1)",
+                    color: "var(--accent)",
+                    fontWeight: "500",
+                  }}
+                >
+                  Continue
+                </span>
+                <p className="mb-0" style={{ color: "var(--secondary)" }}>
+                  Pursuing a Bachelor's degree in Information Technology at the
+                  University of Riphah International,  to deepen my understanding
+                  of technology and its applicati
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

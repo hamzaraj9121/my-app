@@ -1,0 +1,146 @@
+/* Responsive full screen Hero section */
+.hero-section {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: var(--hero-bg);
+  overflow: hidden;
+  text-align: center;
+  padding: 0 0;
+  margin: 0;
+  z-index: 10;
+}
+
+/* Support Tailwind-like `dark:hidden` utility used in Hero.js
+   Hide elements with that class when the app theme is dark. */
+body[data-bs-theme='dark'] .dark\:hidden,
+body[data-bs-theme='dark'] .dark-hidden {
+  display: none !important;
+}
+
+/* Ensure color fades are visible in light mode (explicit) */
+body[data-bs-theme='light'] .color-fade {
+  opacity: 1;
+  display: block;
+}
+
+/* Hide fades in dark mode explicitly */
+body[data-bs-theme='dark'] .color-fade {
+  display: none !important;
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    min-height: 100vh;
+    padding: 0 8px;
+  }
+  .hero-section h1 {
+    font-size: 2.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero-section p,
+  .hero-section .lead {
+    font-size: 1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero-section .pulse-hover-btn {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.2rem !important;
+  }
+}
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(50, 50, 60); /* $darkblue */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  position: relative;
+  border: none;
+  font-size: 18px;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  outline: none;
+  border-radius: 3px;
+  margin: 0 10px;
+  padding: 23px 33px;
+  border: 3px solid transparent;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+button::after,
+button::before {
+  border-radius: 3px;
+}
+
+/* ----------------- Shrink Border ----------------- */
+/* 🌞 Light mode styling for hero */
+body[data-bs-theme='light'] #hero {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+body[data-bs-theme='light'] #hero h1,
+body[data-bs-theme='light'] #hero p {
+  color: #000 !important;
+}
+
+body[data-bs-theme='light'] #hero .pulse-hover-btn {
+  border-color: #000 !important;
+  color: #000 !important;
+}
+
+body[data-bs-theme='light'] #hero .pulse-hover-btn:hover {
+  border-color: #64ffda !important;
+  color: #64ffda !important;
+}
+
+/* 🌚 Dark mode styling for hero */
+body[data-bs-theme='dark'] #hero {
+  background-color: transparent !important;
+  color: #fff !important;
+}
+
+body[data-bs-theme='dark'] #hero h1,
+body[data-bs-theme='dark'] #hero p {
+  color: #fff !important;
+}
+
+body[data-bs-theme='dark'] #hero .pulse-hover-btn {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+body[data-bs-theme='dark'] #hero .pulse-hover-btn:hover {
+  border-color: #64ffda !important;
+  color: #64ffda !important;
+}
+
+
+html[data-theme="dark"] .color-fade {
+  display: none !important;
+}
