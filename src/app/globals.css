@@ -137,7 +137,7 @@ section {
 }
 
 /* Image hover zoom effect */
-  over-zoom {
+  .hover-zoom {
   transition: transform 0.5s ease;
 }
 
