@@ -1,16 +1,16 @@
 // next.config.mjs
-//  @type {import('next').NextConfig} 
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-   compiler: {
+  compiler: {
     removeConsole: false,
-     swcMinify: true,
   },
+
+  swcMinify: true, // Keep minifier enabled
+
   experimental: {
-    optimizePackageImports: ['react-icons'], // disables just for react-icons
+    optimizePackageImports: ["react-icons"],
   },
 };
-
-
 
 export default nextConfig;
