@@ -1,5 +1,6 @@
 // next.config.mjs
 //  @type {import('next').NextConfig} 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
    compiler: {
     removeConsole: false,
