@@ -132,7 +132,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      85%
     </motion.div>
   </div>
 </div>
@@ -152,7 +152,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      75%
     </motion.div>
   </div>
 </div>
@@ -198,7 +198,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      75%
     </motion.div>
   </div>
 </div>
@@ -217,7 +217,7 @@ viewport={{ once: true, amount: 0.2 }}
               whileHover={{ scale: 1.03, boxShadow: "0 4px 24px rgba(100,255,218,0.12)" }}
               style={{
                 minHeight: "300px",
-                backgroundColor: "#051326", // Darker navy blue for cards
+                backgroundColor: "#0f67e1ff", // Darker navy blue for cards
               }}
             >
               <div className="d-flex align-items-center mb-3">
@@ -246,7 +246,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      80%
+      70%
     </motion.div>
   </div>
 </div>
@@ -266,7 +266,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      65%
     </motion.div>
   </div>
 </div>
@@ -286,7 +286,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      60%
     </motion.div>
   </div>
 </div>
@@ -308,7 +308,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      75%
     </motion.div>
   </div>
 </div>
@@ -368,7 +368,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      90%
     </motion.div>
   </div>
 </div>
@@ -419,14 +419,14 @@ viewport={{ once: true, amount: 0.2 }}
       role="progressbar"
       initial={{ width: 0 }}
       style={{ backgroundColor: "#eaff00ff" }}
-      whileInView={{ width: "75%" }}
+      whileInView={{ width: "85%" }}
       transition={{ duration: 1.2, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.3 }}
       aria-valuenow="75"
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      85%
     </motion.div>
   </div>
 </div>
@@ -467,7 +467,7 @@ viewport={{ once: true, amount: 0.2 }}
 
       aria-valuemax="100"
     >
-      95%
+      85%
     </motion.div>
   </div>
 </div>
@@ -487,7 +487,7 @@ viewport={{ once: true, amount: 0.2 }}
       aria-valuemin="0"
       aria-valuemax="100"
     >
-      95%
+      85%
     </motion.div>
   </div>
 </div>
