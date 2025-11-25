@@ -6,7 +6,7 @@ const nextConfig = {
     removeConsole: false,
   },
 
-  swcMinify: true, // Keep minifier enabled
+
 
   experimental: {
     optimizePackageImports: ["react-icons"],
